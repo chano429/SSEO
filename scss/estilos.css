@@ -1,10 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Comforter+Brush&family=Oxygen:wght@300&family=Rubik:ital@1&display=swap");
-/* tragio fuente, es mejor importar y dejar en estilos */
+/* traigo fuente, es mejor importar y dejar en estilos */
 body {
   margin: 0;
   padding: 0;
   font-family: Arial,sans-serif;
-  background-color: black;
+  background-color: #161853;
 }
 
 #plantilla {
@@ -43,7 +43,7 @@ footer {
       -ms-flex-align: center;
           align-items: center;
   /* vertical */
-  background: -prefix-linear-gradient(to #071B33, white);
+  background-color: #FAEDF0;
 }
 
 footer h2 {
@@ -75,12 +75,7 @@ footer h2 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: black;
   font-family: Oxygen;
-}
-
-.menu____item {
-  list-style: none;
 }
 
 .menu ul {
@@ -96,7 +91,7 @@ footer h2 {
   display: inline;
   padding: 10px 10px;
   border-radius: 15px;
-  background-color: hotpink;
+  background-color: #161853;
 }
 
 .menu ul li:hover {
@@ -118,8 +113,7 @@ footer h2 {
   -ms-grid-row: 3;
   -ms-grid-column: 2;
   grid-area: torneos;
-  background: -webkit-gradient(linear, left top, left bottom, from(#071B33), to(white));
-  background: linear-gradient(to bottom, #071B33, white);
+  background-color: #FAEDF0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -149,6 +143,7 @@ footer h2 {
           align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  background-color: #EC255A;
 }
 
 #subMenu p {
@@ -181,6 +176,7 @@ footer h2 {
           justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  background-color: #292C6D;
 }
 
 .border-items {
