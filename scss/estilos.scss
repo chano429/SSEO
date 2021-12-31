@@ -3,20 +3,22 @@
 
 
 
-// Declaración de variables
+// Mapas
 
 $colores:(
     azul: blue,
     fucsia: hotpink,
     verde: green,
-    tomate: tomato
+    tomate: tomato,
+    negro:black,
+    
 );
 
 body{
     margin: 0;
     padding: 0;
     font-family: Arial,sans-serif;
-    background-color: #161853;
+    background-color: map-get($map: $colores, $key:negro );
 }
 
 #plantilla{
@@ -67,15 +69,12 @@ footer{
     display: grid;
     justify-content: flex-end;
     align-items: center;
-    background-color:map-get($map: $colores, $key:azul );
+    background-color:map-get($map: $colores, $key:negro );
     font-family: Oxygen;
     &____item{
         list-style: none;
     }
-    &__lista__item a{
-        text-decoration: none;
-        color:whitesmoke;
-    }
+    
     & ul{
         display:flex;
         justify-content: space-evenly;
@@ -84,8 +83,7 @@ footer{
         display: inline;
         padding: 10px 10px;
         border-radius: 15px;
-        background-color: map-get($map: $colores, $key: azul );
-         
+        background-color: map-get($map: $colores, $key: fucsia );
     }
     & ul li:hover{
         background-color: tomato;
@@ -93,7 +91,9 @@ footer{
     }
 }
 
-
+#colorBotonTexto{
+    color: white;
+}
 
 
 
@@ -145,9 +145,10 @@ footer{
 
 
 .border-items{
-    border: 3px;
+    border: 1px;
     border-color: white;
     border-style: solid;
+    border-radius: 4px;
 }
 
 
@@ -186,11 +187,6 @@ footer{
     50% { transform:  scale(1.2);}
     70% { transform:  scale(1.4);}
     100% { transform:  scale(1);}
-}
-
-.boton{
-    background-color:map-get($map: $colores, $key:verde );
-    margin: 10px;
 }
 
 
