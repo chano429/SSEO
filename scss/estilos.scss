@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Comforter+Brush&family=Oxygen:wght@300&family=Rubik:ital@1&display=swap');
 /* traigo fuente, es mejor importar y dejar en estilos */
 
-
+$step: 16px;
 
 // Mapas
 
@@ -14,8 +14,6 @@ $colores:(
     fucsia: hotpink,
     verde: green,
     tomate: tomato,
-    
-        
 );
 
 body{
@@ -95,14 +93,13 @@ footer{
 }
 
 
-
-
-
-
 #productos{
     grid-area: producto;
+    background-color: map-get($map: $colores, $key:rosapalido );
     padding: 10px;
 }
+
+
 
 #torneos{
     grid-area: torneos;
@@ -195,4 +192,24 @@ footer{
     height: 300px;
 }
 
+
+.boton{
+    width: $step * 10;
+    map-get($map: $colores, $key: rosapalido );
+    border-radius: 15px;
+    border: 1px solid map-get($map: $colores, $key: negro );
+    margin: 10px;
+}
+
+.boton--aceptar{
+    @extend .boton;
+    background-color: map-get($map: $colores, $key: tomate );
+    color: map-get($map: $colores, $key: rosapalido );
+}
+
+.boton--cancelar{
+    @extend .boton;
+    background-color: map-get($map: $colores, $key: verde);
+    color: map-get($map: $colores, $key: rosapalido );  
+}
 
