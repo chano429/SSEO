@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Comforter+Brush&family=Oxygen:wght@300&family=Rubik:ital@1&display=swap");
-/* traigo fuente, es mejor importar y dejar en estilos */
+/* tragio fuente, es mejor importar y dejar en estilos */
 body {
   margin: 0;
   padding: 0;
@@ -43,7 +43,7 @@ footer {
       -ms-flex-align: center;
           align-items: center;
   /* vertical */
-  background-color: #FAEDF0;
+  background: -prefix-linear-gradient(to #071B33, white);
 }
 
 footer h2 {
@@ -55,8 +55,8 @@ footer h2 {
 }
 
 .footer__card {
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
   padding: 10px;
   margin: 10px;
   border-style: solid;
@@ -75,7 +75,12 @@ footer h2 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background-color: #071B33;
   font-family: Oxygen;
+}
+
+.menu____item {
+  list-style: none;
 }
 
 .menu ul {
@@ -91,15 +96,15 @@ footer h2 {
   display: inline;
   padding: 10px 10px;
   border-radius: 15px;
-  background-color: #161853;
+  background-color: #071B33;
 }
 
 .menu ul li:hover {
   background-color: tomato;
 }
 
-#colorBotonTexto {
-  color: white;
+#colorTextoBotones {
+  color: whitesmoke;
 }
 
 #productos {
@@ -113,7 +118,8 @@ footer h2 {
   -ms-grid-row: 3;
   -ms-grid-column: 2;
   grid-area: torneos;
-  background-color: #FAEDF0;
+  background: -webkit-gradient(linear, left top, left bottom, from(#071B33), to(white));
+  background: linear-gradient(to bottom, #071B33, white);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -143,7 +149,6 @@ footer h2 {
           align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  background-color: #EC255A;
 }
 
 #subMenu p {
@@ -167,23 +172,22 @@ footer h2 {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  background-color: #292C6D;
 }
 
 .border-items {
   border: 1px;
   border-color: white;
   border-style: solid;
-  border-radius: 4px;
+  border-radius: 5px;
 }
 
 #logo {
@@ -270,8 +274,86 @@ footer h2 {
   }
 }
 
+.boton {
+  background-color: hotpink;
+  margin: 5px;
+  padding: 10px;
+}
+
 .card {
   width: 100px;
   height: 300px;
+}
+
+@media (max-width: 320px), handheld {
+  #plantilla {
+    display: -ms-grid;
+    display: grid;
+    height: 100vh;
+        grid-template-areas: " header"  " subMenu" " producto" " torneos" " publicidad" " footer";
+    -ms-grid-rows: auto;
+        grid-template-rows: auto;
+    -ms-grid-columns: auto;
+        grid-template-columns: auto;
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+  }
+}
+
+@media (min-width: 321px) and (max-width: 768px), handheld {
+  #plantilla {
+    display: -ms-grid;
+    display: grid;
+    height: 100vh;
+        grid-template-areas: " header header"  " subMenu producto" " subMenu publicidad" " subMenu torneos" " subMenu torneos" " footer footer";
+    -ms-grid-rows: auto;
+        grid-template-rows: auto;
+    -ms-grid-columns: 0.4fr 3fr 0.4fr;
+        grid-template-columns: 0.4fr 3fr 0.4fr;
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 997px), handheld {
+  #plantilla {
+    display: -ms-grid;
+    display: grid;
+    height: 100vh;
+        grid-template-areas: " header header"  " subMenu producto" " subMenu torneos" " subMenu publicidad" " footer footer";
+    -ms-grid-rows: auto;
+        grid-template-rows: auto;
+    -ms-grid-columns: 0.4fr 3fr 0.4fr;
+        grid-template-columns: 0.4fr 3fr 0.4fr;
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+  }
+}
+
+.card {
+  width: 100px;
+  height: 300px;
+}
+
+.botonContacto, .botonContacto__aceptar, .botonContacto__cancelar {
+  width: 160px;
+  background-color: #FAEDF0;
+  border-radius: 15px;
+  border: 1px solid #161853;
+  margin: 10px;
+}
+
+.botonContacto__aceptar {
+  background-color: tomato;
+  color: #FAEDF0;
+}
+
+.botonContacto__cancelar {
+  background-color: green;
+  color: #FAEDF0;
+}
+
+#colorBotonTexto {
+  color: white;
 }
 /*# sourceMappingURL=estilos.css.map */
