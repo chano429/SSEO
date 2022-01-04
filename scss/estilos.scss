@@ -2,6 +2,11 @@
 /* tragio fuente, es mejor importar y dejar en estilos */
 
 $step: 16px;
+// Mixin
+mixin tamanios($ancho, $alto){
+  width: $ancho;
+  height: $alto;
+}
 
 // Mapas
 
@@ -262,3 +267,6 @@ footer {
   color: white;
 }
 
+#imagenTorneos{
+  @include tamanios (500px, 20px);
+}
